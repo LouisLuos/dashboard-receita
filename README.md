@@ -62,3 +62,4 @@ dashboard-receita/
 ## 🚀 4. Como Executar
 
 *(Instruções detalhadas serão adicionadas conforme os componentes do dashboard forem desenvolvidos).*
+

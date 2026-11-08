@@ -63,3 +63,12 @@ dashboard-receita/
 
 *(Instruções detalhadas serão adicionadas conforme os componentes do dashboard forem desenvolvidos).*
 
+
+
+---
+
+## 🏷️ 5. Convenção de Commits
+
+Para manter a rastreabilidade e um histórico limpo, seguimos o padrão **Conventional Commits**. Consulte o guia completo e detalhado com escopos arquiteturais e boas práticas em:
+👉 **[guia_convecoes.md](guia_convecoes.md)**
+

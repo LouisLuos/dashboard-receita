@@ -356,3 +356,34 @@ Qual desses dois caminhos faz mais sentido para o seu momento?
 │   • Contras: Overengineering para um Dashboard interno; você terá que colocar          │
 │           'use client' em quase todos os componentes gráficos do Next.js App Router.  │
 └────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+---
+
+## 🏷️ Convenção de Commits (Conventional Commits)
+
+Adotamos a especificação do **Conventional Commits** adaptada à arquitetura do projeto. O formato padrão de cada commit é:
+
+```bash
+<tipo>(<escopo>): <descrição em minúsculo e sem ponto final>
+```
+
+### 📌 Tipos Principais e Exemplos Práticos
+
+| Tipo | Quando usar | Exemplos no Projeto |
+| :--- | :--- | :--- |
+| `feat` | Nova funcionalidade ou entrega de negócio | `feat(domain): adiciona entidade lancamento receita e calculo do pasep`<br>`feat(frontend): cria card de kpi com alerta de risco fiscal`<br>`feat(backend): implementa endpoint de consolidacao mensal de receitas` |
+| `fix` | Correção de bug no código que estava quebrando | `fix(etl): ajusta parse de valores com virgula na planilha`<br>`fix(application): corrige percentual de concentracao de estatais`<br>`fix(frontend): ajusta renderizacao do grafico de distribuicao no resize` |
+| `refactor` | Mudança interna sem alterar o comportamento ou criar nova feature | `refactor(backend): isola calculo do pasep em value object`<br>`refactor(presentation): limpa imports do controller de receita`<br>`refactor(frontend): extrai card metrico para componente compartilhado` |
+| `chore` | Manutenção, setup, scripts, pacotes, build ou `.gitignore` | `chore: ignora planilhas xlsx no gitignore`<br>`chore(deps): instala lucide-react e recharts no frontend`<br>`chore(backend): configura porta e variaveis de ambiente` |
+| `test` | Criação ou ajuste de testes automatizados | `test(domain): adiciona testes unitarios para invariantes de receita`<br>`test(application): cobre caso de borda de deducao tributavel do pasep`<br>`test(backend): adiciona teste e2e para endpoint de kpis` |
+| `docs` | Alteração em documentação, guias ou README | `docs: atualiza guia de arquitetura no stack.md`<br>`docs: documenta regras de negocio do pasep no readme` |
+
+### 🎯 Escopos Sugeridos pelo Desenho Arquitetural
+
+- `domain`: Regras puras, Entidades, Value Objects, cálculos de negócio (ex.: PASEP, validações de receita).
+- `application` / `usecase`: Casos de uso e orquestrações (ex.: consolidação, apuração de tributos).
+- `backend`: Controllers, módulos NestJS/FastAPI, endpoints, DTOs e serviços de infra.
+- `frontend`: Componentes React/Next, páginas, layout, gráficos (Recharts) e estilos Tailwind.
+- `etl`: Scripts e adaptadores de leitura/extração de planilhas (Pandas, Excel).
+- `deps`: Adição, remoção ou upgrade de dependências nos `package.json`.

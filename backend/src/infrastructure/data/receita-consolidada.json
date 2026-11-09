@@ -1,0 +1,667 @@
+{
+  "anoExercicio": 2026,
+  "competencias": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2026-09",
+    "2026-10"
+  ],
+  "arrecadacaoTotalYTD": 20231736.09,
+  "mediaMensal": 2023173.61,
+  "totalPasepYTD": 197029.06,
+  "percentualEstataisTop2": 82.53,
+  "fontes": [
+    {
+      "id": "tfsd_compesa",
+      "nome": "TFSD COMPESA",
+      "categoria": "TFSD",
+      "concessionaria": "COMPESA",
+      "isEstatalTop2": true,
+      "isDedutivelPasep": false,
+      "lancamentos": [
+        {
+          "competencia": "2026-01",
+          "mesExtenso": "JANEIRO",
+          "valor": 1067126.76
+        },
+        {
+          "competencia": "2026-02",
+          "mesExtenso": "FEVEREIRO",
+          "valor": 1067126.76
+        },
+        {
+          "competencia": "2026-03",
+          "mesExtenso": "MARÇO",
+          "valor": 1067126.76
+        },
+        {
+          "competencia": "2026-04",
+          "mesExtenso": "ABRIL",
+          "valor": 1067126.76
+        },
+        {
+          "competencia": "2026-05",
+          "mesExtenso": "MAIO",
+          "valor": 1067126.76
+        },
+        {
+          "competencia": "2026-06",
+          "mesExtenso": "JUNHO",
+          "valor": 1067126.76
+        },
+        {
+          "competencia": "2026-07",
+          "mesExtenso": "JULHO",
+          "valor": 1067126.76
+        },
+        {
+          "competencia": "2026-08",
+          "mesExtenso": "AGOSTO",
+          "valor": 1067126.76
+        },
+        {
+          "competencia": "2026-09",
+          "mesExtenso": "SETEMBRO",
+          "valor": 1067126.76
+        },
+        {
+          "competencia": "2026-10",
+          "mesExtenso": "OUTUBRO",
+          "valor": 1067126.76
+        }
+      ],
+      "totalYTD": 10671267.6
+    },
+    {
+      "id": "tfsd_copergas",
+      "nome": "TFSD COPERGÁS",
+      "categoria": "TFSD",
+      "concessionaria": "COPERGÁS",
+      "isEstatalTop2": true,
+      "isDedutivelPasep": false,
+      "lancamentos": [
+        {
+          "competencia": "2026-01",
+          "mesExtenso": "JANEIRO",
+          "valor": 602662.56
+        },
+        {
+          "competencia": "2026-02",
+          "mesExtenso": "FEVEREIRO",
+          "valor": 602662.56
+        },
+        {
+          "competencia": "2026-03",
+          "mesExtenso": "MARÇO",
+          "valor": 602662.56
+        },
+        {
+          "competencia": "2026-04",
+          "mesExtenso": "ABRIL",
+          "valor": 602662.56
+        },
+        {
+          "competencia": "2026-05",
+          "mesExtenso": "MAIO",
+          "valor": 602662.56
+        },
+        {
+          "competencia": "2026-06",
+          "mesExtenso": "JUNHO",
+          "valor": 602662.56
+        },
+        {
+          "competencia": "2026-07",
+          "mesExtenso": "JULHO",
+          "valor": 602662.56
+        },
+        {
+          "competencia": "2026-08",
+          "mesExtenso": "AGOSTO",
+          "valor": 602662.56
+        },
+        {
+          "competencia": "2026-09",
+          "mesExtenso": "SETEMBRO",
+          "valor": 602662.56
+        },
+        {
+          "competencia": "2026-10",
+          "mesExtenso": "OUTUBRO",
+          "valor": 602662.56
+        }
+      ],
+      "totalYTD": 6026625.6
+    },
+    {
+      "id": "tfsi_os_oscip",
+      "nome": "TFSI OS/OSCIP",
+      "categoria": "TFSI",
+      "concessionaria": "OS/OSCIP Diversas",
+      "isEstatalTop2": false,
+      "isDedutivelPasep": false,
+      "lancamentos": [
+        {
+          "competencia": "2026-01",
+          "mesExtenso": "JANEIRO",
+          "valor": 186410.68
+        },
+        {
+          "competencia": "2026-02",
+          "mesExtenso": "FEVEREIRO",
+          "valor": 137190.54
+        },
+        {
+          "competencia": "2026-03",
+          "mesExtenso": "MARÇO",
+          "valor": 91709.11
+        },
+        {
+          "competencia": "2026-04",
+          "mesExtenso": "ABRIL",
+          "valor": 122515.97
+        },
+        {
+          "competencia": "2026-05",
+          "mesExtenso": "MAIO",
+          "valor": 178428.7
+        },
+        {
+          "competencia": "2026-06",
+          "mesExtenso": "JUNHO",
+          "valor": 160036.23
+        },
+        {
+          "competencia": "2026-07",
+          "mesExtenso": "JULHO",
+          "valor": 119738.72
+        },
+        {
+          "competencia": "2026-08",
+          "mesExtenso": "AGOSTO",
+          "valor": 188794.18
+        },
+        {
+          "competencia": "2026-09",
+          "mesExtenso": "SETEMBRO",
+          "valor": 170368.14
+        },
+        {
+          "competencia": "2026-10",
+          "mesExtenso": "OUTUBRO",
+          "valor": 159052.2
+        }
+      ],
+      "totalYTD": 1514244.47
+    },
+    {
+      "id": "tfsd_rota_atlantico",
+      "nome": "TFSD ROTA DO ATLÂNTICO",
+      "categoria": "TFSD",
+      "concessionaria": "Rota do Atlântico",
+      "isEstatalTop2": false,
+      "isDedutivelPasep": false,
+      "lancamentos": [
+        {
+          "competencia": "2026-01",
+          "mesExtenso": "JANEIRO",
+          "valor": 33890.88
+        },
+        {
+          "competencia": "2026-02",
+          "mesExtenso": "FEVEREIRO",
+          "valor": 33890.88
+        },
+        {
+          "competencia": "2026-03",
+          "mesExtenso": "MARÇO",
+          "valor": 33890.88
+        },
+        {
+          "competencia": "2026-04",
+          "mesExtenso": "ABRIL",
+          "valor": 33890.88
+        },
+        {
+          "competencia": "2026-05",
+          "mesExtenso": "MAIO",
+          "valor": 75838.98
+        },
+        {
+          "competencia": "2026-06",
+          "mesExtenso": "JUNHO",
+          "valor": 19908.18
+        },
+        {
+          "competencia": "2026-07",
+          "mesExtenso": "JULHO",
+          "valor": 0
+        },
+        {
+          "competencia": "2026-08",
+          "mesExtenso": "AGOSTO",
+          "valor": 77489.08
+        },
+        {
+          "competencia": "2026-09",
+          "mesExtenso": "SETEMBRO",
+          "valor": 38551.78
+        },
+        {
+          "competencia": "2026-10",
+          "mesExtenso": "OUTUBRO",
+          "valor": 38551.78
+        }
+      ],
+      "totalYTD": 385903.32
+    },
+    {
+      "id": "tfsd_rota_coqueiros",
+      "nome": "TFSD ROTA DOS COQUEIROS",
+      "categoria": "TFSD",
+      "concessionaria": "Rota dos Coqueiros",
+      "isEstatalTop2": false,
+      "isDedutivelPasep": false,
+      "lancamentos": [
+        {
+          "competencia": "2026-01",
+          "mesExtenso": "JANEIRO",
+          "valor": 11460.7
+        },
+        {
+          "competencia": "2026-02",
+          "mesExtenso": "FEVEREIRO",
+          "valor": 11460.7
+        },
+        {
+          "competencia": "2026-03",
+          "mesExtenso": "MARÇO",
+          "valor": 11460.7
+        },
+        {
+          "competencia": "2026-04",
+          "mesExtenso": "ABRIL",
+          "valor": 11460.7
+        },
+        {
+          "competencia": "2026-05",
+          "mesExtenso": "MAIO",
+          "valor": 35316.81
+        },
+        {
+          "competencia": "2026-06",
+          "mesExtenso": "JUNHO",
+          "valor": 0
+        },
+        {
+          "competencia": "2026-07",
+          "mesExtenso": "JULHO",
+          "valor": 0
+        },
+        {
+          "competencia": "2026-08",
+          "mesExtenso": "AGOSTO",
+          "valor": 25350.48
+        },
+        {
+          "competencia": "2026-09",
+          "mesExtenso": "SETEMBRO",
+          "valor": 12612.18
+        },
+        {
+          "competencia": "2026-10",
+          "mesExtenso": "OUTUBRO",
+          "valor": 12612.18
+        }
+      ],
+      "totalYTD": 131734.45
+    },
+    {
+      "id": "tfsd_socicam",
+      "nome": "TFSD SOCICAM",
+      "categoria": "TFSD",
+      "concessionaria": "SOCICAM Terminais",
+      "isEstatalTop2": false,
+      "isDedutivelPasep": false,
+      "lancamentos": [
+        {
+          "competencia": "2026-01",
+          "mesExtenso": "JANEIRO",
+          "valor": 5634.72
+        },
+        {
+          "competencia": "2026-02",
+          "mesExtenso": "FEVEREIRO",
+          "valor": 8871.04
+        },
+        {
+          "competencia": "2026-03",
+          "mesExtenso": "MARÇO",
+          "valor": 6760.61
+        },
+        {
+          "competencia": "2026-04",
+          "mesExtenso": "ABRIL",
+          "valor": 5739.17
+        },
+        {
+          "competencia": "2026-05",
+          "mesExtenso": "MAIO",
+          "valor": 5486.53
+        },
+        {
+          "competencia": "2026-06",
+          "mesExtenso": "JUNHO",
+          "valor": 5234.44
+        },
+        {
+          "competencia": "2026-07",
+          "mesExtenso": "JULHO",
+          "valor": 5226.6
+        },
+        {
+          "competencia": "2026-08",
+          "mesExtenso": "AGOSTO",
+          "valor": 8913.23
+        },
+        {
+          "competencia": "2026-09",
+          "mesExtenso": "SETEMBRO",
+          "valor": 5119.88
+        },
+        {
+          "competencia": "2026-10",
+          "mesExtenso": "OUTUBRO",
+          "valor": 3979.57
+        }
+      ],
+      "totalYTD": 60965.79
+    },
+    {
+      "id": "receita_aneel",
+      "nome": "CONVÊNIO ANEEL",
+      "categoria": "CONVENIO_ANEEL",
+      "concessionaria": "ANEEL",
+      "isEstatalTop2": false,
+      "isDedutivelPasep": true,
+      "lancamentos": [
+        {
+          "competencia": "2026-01",
+          "mesExtenso": "JANEIRO",
+          "valor": 93173.67
+        },
+        {
+          "competencia": "2026-02",
+          "mesExtenso": "FEVEREIRO",
+          "valor": 0
+        },
+        {
+          "competencia": "2026-03",
+          "mesExtenso": "MARÇO",
+          "valor": 112500
+        },
+        {
+          "competencia": "2026-04",
+          "mesExtenso": "ABRIL",
+          "valor": 0
+        },
+        {
+          "competencia": "2026-05",
+          "mesExtenso": "MAIO",
+          "valor": 46932.3
+        },
+        {
+          "competencia": "2026-06",
+          "mesExtenso": "JUNHO",
+          "valor": 95929.08
+        },
+        {
+          "competencia": "2026-07",
+          "mesExtenso": "JULHO",
+          "valor": 0
+        },
+        {
+          "competencia": "2026-08",
+          "mesExtenso": "AGOSTO",
+          "valor": 5770.45
+        },
+        {
+          "competencia": "2026-09",
+          "mesExtenso": "SETEMBRO",
+          "valor": 0
+        },
+        {
+          "competencia": "2026-10",
+          "mesExtenso": "OUTUBRO",
+          "valor": 174525.46
+        }
+      ],
+      "totalYTD": 528830.96
+    },
+    {
+      "id": "multa_compesa",
+      "nome": "MULTA COMPESA",
+      "categoria": "MULTAS",
+      "concessionaria": "COMPESA",
+      "isEstatalTop2": false,
+      "isDedutivelPasep": false,
+      "lancamentos": [
+        {
+          "competencia": "2026-01",
+          "mesExtenso": "JANEIRO",
+          "valor": 7792.15
+        },
+        {
+          "competencia": "2026-02",
+          "mesExtenso": "FEVEREIRO",
+          "valor": 7817.86
+        },
+        {
+          "competencia": "2026-03",
+          "mesExtenso": "MARÇO",
+          "valor": 7872.59
+        },
+        {
+          "competencia": "2026-04",
+          "mesExtenso": "ABRIL",
+          "valor": 7941.86
+        },
+        {
+          "competencia": "2026-05",
+          "mesExtenso": "MAIO",
+          "valor": 7995.07
+        },
+        {
+          "competencia": "2026-06",
+          "mesExtenso": "JUNHO",
+          "valor": 8041.45
+        },
+        {
+          "competencia": "2026-07",
+          "mesExtenso": "JULHO",
+          "valor": 8054.31
+        },
+        {
+          "competencia": "2026-08",
+          "mesExtenso": "AGOSTO",
+          "valor": 8059.95
+        },
+        {
+          "competencia": "2026-09",
+          "mesExtenso": "SETEMBRO",
+          "valor": 8034.16
+        },
+        {
+          "competencia": "2026-10",
+          "mesExtenso": "OUTUBRO",
+          "valor": 8100.04
+        }
+      ],
+      "totalYTD": 79709.44
+    },
+    {
+      "id": "receitas_financeiras",
+      "nome": "RECEITAS FINANCEIRAS",
+      "categoria": "PATRIMONIAL",
+      "concessionaria": "Caixa Econômica",
+      "isEstatalTop2": false,
+      "isDedutivelPasep": false,
+      "lancamentos": [
+        {
+          "competencia": "2026-01",
+          "mesExtenso": "JANEIRO",
+          "valor": 60407.57
+        },
+        {
+          "competencia": "2026-02",
+          "mesExtenso": "FEVEREIRO",
+          "valor": 58222.64
+        },
+        {
+          "competencia": "2026-03",
+          "mesExtenso": "MARÇO",
+          "valor": 74826.57
+        },
+        {
+          "competencia": "2026-04",
+          "mesExtenso": "ABRIL",
+          "valor": 75253.04
+        },
+        {
+          "competencia": "2026-05",
+          "mesExtenso": "MAIO",
+          "valor": 80631.75
+        },
+        {
+          "competencia": "2026-06",
+          "mesExtenso": "JUNHO",
+          "valor": 86538.14
+        },
+        {
+          "competencia": "2026-07",
+          "mesExtenso": "JULHO",
+          "valor": 103769.81
+        },
+        {
+          "competencia": "2026-08",
+          "mesExtenso": "AGOSTO",
+          "valor": 99173.48
+        },
+        {
+          "competencia": "2026-09",
+          "mesExtenso": "SETEMBRO",
+          "valor": 96559.87
+        },
+        {
+          "competencia": "2026-10",
+          "mesExtenso": "OUTUBRO",
+          "valor": 97071.59
+        }
+      ],
+      "totalYTD": 832454.46
+    }
+  ],
+  "memoriaPasep": [
+    {
+      "competencia": "2026-01",
+      "mesExtenso": "JANEIRO",
+      "receitaBruta": 2068559.69,
+      "deducaoAneel": 93173.67,
+      "baseTributavel": 1975386.02,
+      "aliquota": 0.01,
+      "pasepDevido": 19753.86
+    },
+    {
+      "competencia": "2026-02",
+      "mesExtenso": "FEVEREIRO",
+      "receitaBruta": 1927242.98,
+      "deducaoAneel": 0,
+      "baseTributavel": 1927242.98,
+      "aliquota": 0.01,
+      "pasepDevido": 19272.43
+    },
+    {
+      "competencia": "2026-03",
+      "mesExtenso": "MARÇO",
+      "receitaBruta": 2008809.78,
+      "deducaoAneel": 112500,
+      "baseTributavel": 1896309.78,
+      "aliquota": 0.01,
+      "pasepDevido": 18963.1
+    },
+    {
+      "competencia": "2026-04",
+      "mesExtenso": "ABRIL",
+      "receitaBruta": 1926590.94,
+      "deducaoAneel": 0,
+      "baseTributavel": 1926590.94,
+      "aliquota": 0.01,
+      "pasepDevido": 19265.91
+    },
+    {
+      "competencia": "2026-05",
+      "mesExtenso": "MAIO",
+      "receitaBruta": 2100419.46,
+      "deducaoAneel": 46932.3,
+      "baseTributavel": 2053487.16,
+      "aliquota": 0.01,
+      "pasepDevido": 20534.87
+    },
+    {
+      "competencia": "2026-06",
+      "mesExtenso": "JUNHO",
+      "receitaBruta": 2045476.84,
+      "deducaoAneel": 95929.08,
+      "baseTributavel": 1949547.76,
+      "aliquota": 0.01,
+      "pasepDevido": 19495.48
+    },
+    {
+      "competencia": "2026-07",
+      "mesExtenso": "JULHO",
+      "receitaBruta": 1906578.76,
+      "deducaoAneel": 0,
+      "baseTributavel": 1906578.76,
+      "aliquota": 0.01,
+      "pasepDevido": 19065.79
+    },
+    {
+      "competencia": "2026-08",
+      "mesExtenso": "AGOSTO",
+      "receitaBruta": 2083340.17,
+      "deducaoAneel": 5770.45,
+      "baseTributavel": 2077569.72,
+      "aliquota": 0.01,
+      "pasepDevido": 20775.7
+    },
+    {
+      "competencia": "2026-09",
+      "mesExtenso": "SETEMBRO",
+      "receitaBruta": 2001035.33,
+      "deducaoAneel": 0,
+      "baseTributavel": 2001035.33,
+      "aliquota": 0.01,
+      "pasepDevido": 20010.35
+    },
+    {
+      "competencia": "2026-10",
+      "mesExtenso": "OUTUBRO",
+      "receitaBruta": 2163682.14,
+      "deducaoAneel": 174525.46,
+      "baseTributavel": 1989156.68,
+      "aliquota": 0.01,
+      "pasepDevido": 19891.57
+    }
+  ],
+  "metadata": {
+    "geradoEm": "2026-11-09T12:30:13.708Z",
+    "origem": "QUADRO_RECEITA_PASEP_2026.ANDRE - outubro.xlsx",
+    "totalCompetenciasValidas": 10
+  }
+}

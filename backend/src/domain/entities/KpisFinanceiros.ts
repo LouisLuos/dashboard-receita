@@ -1,5 +1,6 @@
 
 import { ValorMonetario } from "../value-object/valor-monetario.js";
+import { KpiInconsistenteError } from "../errors/domain-errors.js";
 
 export class KpiFinanceiros {
     private readonly arrecadacaoTotal: ValorMonetario;
@@ -18,15 +19,15 @@ export class KpiFinanceiros {
         totalEstataisTop2: ValorMonetario
     ) {
         if (arrecadacaoTotal.valor <= 0) {
-            throw new Error("Valor de arrecadação inválido: deve ser maior que zero.");
+            throw new KpiInconsistenteError("Valor de arrecadação inválido: deve ser maior que zero.");
         }
 
         if (quantidadeCompetencias <= 0 || !Number.isInteger(quantidadeCompetencias)) {
-            throw new Error("A quantidade de competências deve ser um número inteiro maior que zero.");
+            throw new KpiInconsistenteError("A quantidade de competências deve ser um número inteiro maior que zero.");
         }
 
         if (totalEstataisTop2.valor > arrecadacaoTotal.valor) {
-            throw new Error("Inconsistência orçamentária: o total das estatais não pode ser maior que a arrecadação total.");
+            throw new KpiInconsistenteError("Inconsistência orçamentária: o total das estatais não pode ser maior que a arrecadação total.");
         }
 
         this.arrecadacaoTotal = arrecadacaoTotal;

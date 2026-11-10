@@ -1,14 +1,15 @@
+import { ValorMonetarioInvalidoError } from '../errors/domain-errors.js';
+
 export class ValorMonetario {
     private readonly _valorEmCentavos: number
-
     
 private constructor(valor: number) {
     if (isNaN(valor) || !isFinite(valor)) {
-        throw new Error('Valor monetário inválido: deve ser um número finito.');
+        throw new ValorMonetarioInvalidoError('Valor monetário inválido: deve ser um número finito.');
     } 
 
     if (valor < 0) {
-        throw new Error('Valor monetário não pode ser negativo em receitas orçamentárias.');
+        throw new ValorMonetarioInvalidoError('Valor monetário não pode ser negativo em receitas orçamentárias.');
     } 
 
     // Agora este comando roda para qualquer número válido!
@@ -44,7 +45,7 @@ private constructor(valor: number) {
         const result = this._valorEmCentavos - outro._valorEmCentavos
 
         if (result < 0) {
-            throw new Error('Operação inválida: a dedução não pode resultar em valor negativo.');
+            throw new ValorMonetarioInvalidoError('Operação inválida: a dedução não pode resultar em valor negativo.');
         }
 
         return ValorMonetario.deCentavos(result)

@@ -1,8 +1,10 @@
 // 📁 Caminho: src/application/use-cases/calcular-kpis-financeiros.use-case.ts
+import { DadosNaoEncontradosError } from "../errors/application-errors.js";
 import { KpiFinanceiros } from "../../domain/entities/KpisFinanceiros.js";
 import { ValorMonetario } from "../../domain/value-object/valor-monetario.js";
 import { KpisOutputDTO } from "../dtos/kpis-output.dto.js";
 import { IReceitaRepository } from "../ports/IReceitaRepository.js";
+
 
 export class CalcularKpisFinanceirosUseCase {
     constructor(private readonly kpiRepo: IReceitaRepository) {}
@@ -11,7 +13,7 @@ export class CalcularKpisFinanceirosUseCase {
         const data = await this.kpiRepo.obterDadosConsolidados();
 
         if (!data) {
-            throw new Error("Dados não encontrados");
+            throw new DadosNaoEncontradosError("Dados não encontrados");
         }
 
         // 1. Busca os valores de COMPESA e COPERGÁS na base

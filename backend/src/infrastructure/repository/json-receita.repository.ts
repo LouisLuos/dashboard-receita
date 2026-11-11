@@ -36,6 +36,7 @@ export class JsonReceitaRepository implements IReceitaRepository {
         );
     }
 
+
     async obterDadosConsolidados(): Promise<IBaseConsolidadaReceita> {
         if (this.cache) {
             return this.cache;

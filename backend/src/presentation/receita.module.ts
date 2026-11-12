@@ -2,12 +2,12 @@
 import { Module } from '@nestjs/common';
 import { ReceitaController } from './receita.controller.js';
 import { CalcularKpisFinanceirosUseCase } from '../application/use-cases/calcular-kpis-financeiros.use-case.js';
+import { ApurarPasepMensalUseCase } from '../application/use-cases/apurar-pasep-mensal.use-case.js';
 import { JsonReceitaRepository } from '../infrastructure/repository/json-receita.repository.js';
 
 @Module({
   controllers: [ReceitaController],
   providers: [
-    // 1. Registra o repositório - Prover o dado para ser consumido.
     JsonReceitaRepository,
     {
       provide: CalcularKpisFinanceirosUseCase,
@@ -16,7 +16,14 @@ import { JsonReceitaRepository } from '../infrastructure/repository/json-receita
       },
       inject: [JsonReceitaRepository],
     },
+    {
+      provide: ApurarPasepMensalUseCase,
+      useFactory: (repo: JsonReceitaRepository) => {
+        return new ApurarPasepMensalUseCase(repo);
+      },
+      inject: [JsonReceitaRepository],
+    },
   ],
-  exports: [CalcularKpisFinanceirosUseCase],
+  exports: [CalcularKpisFinanceirosUseCase, ApurarPasepMensalUseCase],
 })
 export class ReceitaModule {}

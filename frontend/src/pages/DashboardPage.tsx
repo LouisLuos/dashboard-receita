@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { AppLayout } from '../components/layout/AppLayout';
 import { KpiGrid } from '../components/kpis/KpiGrid';
-import { obterKpisConsolidados } from '../services/receitaService';
-import type { KpisOutputDTO } from '../types/receita';
+import { PasepMemoriaTable } from '../components/pasep/PasepMemoriaTable';
+import { obterKpisConsolidados, obterMemoriaPasep } from '../services/receitaService';
+import type { KpisOutputDTO, PasepConsolidadoOutputDTO } from '../types/receita';
 
 export const DashboardPage: React.FC = () => {
   const [kpis, setKpis] = useState<KpisOutputDTO | null>(null);
+  const [pasep, setPasep] = useState<PasepConsolidadoOutputDTO | null>(null);
   const [loading, setLoading] = useState(true);
   const [erro, setErro] = useState<string | null>(null);
 
@@ -13,8 +15,12 @@ export const DashboardPage: React.FC = () => {
     try {
       setLoading(true);
       setErro(null);
-      const dados = await obterKpisConsolidados();
-      setKpis(dados);
+      const [dadosKpis, dadosPasep] = await Promise.all([
+        obterKpisConsolidados(),
+        obterMemoriaPasep(),
+      ]);
+      setKpis(dadosKpis);
+      setPasep(dadosPasep);
     } catch (err) {
       setErro(err instanceof Error ? err.message : 'Falha ao buscar dados');
     } finally {
@@ -48,7 +54,11 @@ export const DashboardPage: React.FC = () => {
       <section>
         <KpiGrid dados={kpis} loading={loading} erro={null} />
       </section>
+
+      {/* Memória de Cálculo Mensal Auditável do PASEP 1% (HU-02) */}
+      <section>
+        <PasepMemoriaTable dados={pasep} loading={loading} />
+      </section>
     </AppLayout>
   );
 };
-

@@ -1,5 +1,13 @@
 # AGENTS.md
 
+## Arquitetura do Projeto (Clean Architecture em 4 Camadas)
+
+Este backend segue a divisão clara em **4 camadas** dentro de `src/`:
+- **`src/domain/`**: Regras de negócio puras (`entities/`, `value-object/`, `errors/`). Zero dependências de NestJS ou I/O.
+- **`src/application/`**: Orquestração da aplicação (`use-cases/`, `ports/`, `dtos/`, `errors/`).
+- **`src/infrastructure/`**: Implementações técnicas de acesso a dados (`data/receita-consolidada.json`, `repository/json-receita.repository.ts`).
+- **`src/presentation/`**: Fronteira HTTP do NestJS (`receita.controller.ts`, `receita.module.ts`).
+
 ## NestJS
 
 This app's version of NestJS is likely newer than what you know. https://docs.nestjs.com/llms.txt indexes its documentation, with a markdown page per chapter.

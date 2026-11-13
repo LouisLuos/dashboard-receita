@@ -36,3 +36,27 @@ export interface PasepConsolidadoOutputDTO {
     pasepTotalFormatado: string;
   };
 }
+
+export interface EvolucaoMensalPontoDTO {
+  competencia: string;
+  mesRotulo: string;
+  receitaBruta: number;
+  baseTributavel: number;
+  pasepDevido: number;
+}
+
+export interface ShareFonteItemDTO {
+  id: string;
+  nome: string;
+  categoria: string;
+  valorTotal: number;
+  valorFormatado: string;
+  percentualShare: number;
+  percentualFormatado: string;
+  isIsentoPasep?: boolean;
+}
+
+export interface GraficosDashboardOutputDTO {
+  evolucaoMensal: EvolucaoMensalPontoDTO[];
+  distribuicaoShare: ShareFonteItemDTO[];
+}

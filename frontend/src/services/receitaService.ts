@@ -1,4 +1,8 @@
-import type { KpisOutputDTO, PasepConsolidadoOutputDTO } from '../types/receita';
+import type {
+  KpisOutputDTO,
+  PasepConsolidadoOutputDTO,
+  GraficosDashboardOutputDTO,
+} from '../types/receita';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
@@ -38,3 +42,8 @@ export async function obterKpisConsolidados(): Promise<KpisOutputDTO> {
 export async function obterMemoriaPasep(): Promise<PasepConsolidadoOutputDTO> {
   return fetchReceitaApi<PasepConsolidadoOutputDTO>('/api/v1/receita/pasep');
 }
+
+export async function obterGraficosDashboard(): Promise<GraficosDashboardOutputDTO> {
+  return fetchReceitaApi<GraficosDashboardOutputDTO>('/api/v1/receita/graficos');
+}
+

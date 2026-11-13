@@ -8,8 +8,10 @@ import {
 } from '@nestjs/common';
 import { CalcularKpisFinanceirosUseCase } from '../application/use-cases/calcular-kpis-financeiros.use-case.js';
 import { ApurarPasepMensalUseCase } from '../application/use-cases/apurar-pasep-mensal.use-case.js';
+import { ObterGraficosDashboardUseCase } from '../application/use-cases/obter-graficos-dashboard.use-case.js';
 import type { KpisOutputDTO } from '../application/dtos/kpis-output.dto.js';
 import type { PasepConsolidadoOutputDTO } from '../application/dtos/pasep-output.dto.js';
+import type { GraficosDashboardOutputDTO } from '../application/dtos/graficos-dashboard-output.dto.js';
 import { DadosNaoEncontradosError } from '../application/errors/application-errors.js';
 import { DomainError } from '../domain/errors/domain-errors.js';
 
@@ -20,6 +22,7 @@ export class ReceitaController {
   constructor(
     private readonly calcularKpisUseCase: CalcularKpisFinanceirosUseCase,
     private readonly apurarPasepUseCase: ApurarPasepMensalUseCase,
+    private readonly obterGraficosUseCase: ObterGraficosDashboardUseCase,
   ) {}
 
   /**
@@ -45,6 +48,19 @@ export class ReceitaController {
       return await this.apurarPasepUseCase.executar();
     } catch (error) {
       this.tratarErro(error, 'apurar a memória mensal do PASEP');
+    }
+  }
+
+  /**
+   * GET /api/v1/receita/graficos
+   * Retorna os dados agregados para Evolução Mensal e Distribuição de Share (Donut)
+   */
+  @Get('graficos')
+  async obterGraficos(): Promise<GraficosDashboardOutputDTO> {
+    try {
+      return await this.obterGraficosUseCase.executar();
+    } catch (error) {
+      this.tratarErro(error, 'obter os gráficos do dashboard');
     }
   }
 

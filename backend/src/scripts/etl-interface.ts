@@ -1,11 +1,7 @@
 // 📁 Caminho sugerido: backend/src/scripts/etl-interface.ts
 
-export type CategoriaReceita = 
-  | 'TFSD' 
-  | 'TFSI' 
-  | 'CONVENIO_ANEEL' 
-  | 'MULTAS' 
-  | 'PATRIMONIAL';
+import { CategoriaReceita } from "../domain/types/categoria-receita";
+
 
 export interface ILancamentoMensal {
   competencia: string; // Formato padrão ISO: "2026-01", "2026-02", etc.

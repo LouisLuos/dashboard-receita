@@ -5,7 +5,9 @@ import {
   BadRequestException,
   InternalServerErrorException,
   Logger,
+  UseGuards,
 } from '@nestjs/common';
+import { JwtAuthGuard } from './guards/jwt-auth.guard.js';
 import { CalcularKpisFinanceirosUseCase } from '../application/use-cases/calcular-kpis-financeiros.use-case.js';
 import { ApurarPasepMensalUseCase } from '../application/use-cases/apurar-pasep-mensal.use-case.js';
 import { ObterGraficosDashboardUseCase } from '../application/use-cases/obter-graficos-dashboard.use-case.js';
@@ -15,6 +17,7 @@ import type { GraficosDashboardOutputDTO } from '../application/dtos/graficos-da
 import { DadosNaoEncontradosError } from '../application/errors/application-errors.js';
 import { DomainError } from '../domain/errors/domain-errors.js';
 
+@UseGuards(JwtAuthGuard)
 @Controller('receita')
 export class ReceitaController {
   private readonly logger = new Logger(ReceitaController.name);

@@ -1,5 +1,6 @@
 // 📁 Caminho: src/presentation/receita.module.ts
 import { Module } from '@nestjs/common';
+import { AuthModule } from './auth.module.js';
 import { ReceitaController } from './receita.controller.js';
 import { CalcularKpisFinanceirosUseCase } from '../application/use-cases/calcular-kpis-financeiros.use-case.js';
 import { ApurarPasepMensalUseCase } from '../application/use-cases/apurar-pasep-mensal.use-case.js';
@@ -7,6 +8,7 @@ import { ObterGraficosDashboardUseCase } from '../application/use-cases/obter-gr
 import { JsonReceitaRepository } from '../infrastructure/repository/json-receita.repository.js';
 
 @Module({
+  imports: [AuthModule],
   controllers: [ReceitaController],
   providers: [
     JsonReceitaRepository,

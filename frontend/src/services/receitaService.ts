@@ -3,14 +3,31 @@ import type {
   PasepConsolidadoOutputDTO,
   GraficosDashboardOutputDTO,
 } from '../types/receita';
+import { obterToken, removerToken } from './authService';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
 async function fetchReceitaApi<T>(endpoint: string): Promise<T> {
+  const token = obterToken();
+
   try {
-    const response = await fetch(`${API_BASE_URL}${endpoint}`);
+    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+      headers: token
+        ? {
+            Authorization: `Bearer ${token}`,
+          }
+        : undefined,
+    });
 
     if (!response.ok) {
+      if (response.status === 401) {
+        removerToken();
+        if (window.location.pathname !== '/login') {
+          window.history.pushState({}, '', '/login');
+          window.dispatchEvent(new PopStateEvent('popstate'));
+        }
+        throw new Error('Sessão expirada ou não autorizada (401). Faça login novamente.');
+      }
       if (response.status === 404) {
         throw new Error('Base de receitas não encontrada na API (404). Verifique a base de dados consolidada.');
       }

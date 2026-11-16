@@ -1,16 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import { DashboardPage } from '../pages/DashboardPage';
 import { LoginPage } from '../pages/LoginPage';
+import { estaAutenticado } from '../services/authService';
 
 export type AppRoute = '/' | '/login';
 
+function resolverRotaInicial(): AppRoute {
+  if (!estaAutenticado()) {
+    return '/login';
+  }
+  return window.location.pathname === '/login' ? '/' : '/';
+}
+
 export const AppRouter: React.FC = () => {
-  const [currentPath, setCurrentPath] = useState<AppRoute>(() => {
-    return window.location.pathname === '/login' ? '/login' : '/';
-  });
+  const [currentPath, setCurrentPath] = useState<AppRoute>(resolverRotaInicial);
 
   useEffect(() => {
+    const autenticado = estaAutenticado();
+    if (!autenticado && window.location.pathname !== '/login') {
+      window.history.replaceState({}, '', '/login');
+    } else if (autenticado && window.location.pathname === '/login') {
+      window.history.replaceState({}, '', '/');
+    }
+
     const onLocationChange = () => {
+      if (!estaAutenticado()) {
+        if (window.location.pathname !== '/login') {
+          window.history.replaceState({}, '', '/login');
+        }
+        setCurrentPath('/login');
+        return;
+      }
       setCurrentPath(window.location.pathname === '/login' ? '/login' : '/');
     };
 
@@ -23,7 +43,7 @@ export const AppRouter: React.FC = () => {
     setCurrentPath(path);
   };
 
-  if (currentPath === '/login') {
+  if (currentPath === '/login' || !estaAutenticado()) {
     return <LoginPage onLoginSucesso={() => navigateTo('/')} />;
   }
 

@@ -1,7 +1,9 @@
 import React from 'react';
+import { removerToken } from '../../services/authService';
 
 export const Header: React.FC = () => {
   const handleLogout = () => {
+    removerToken();
     window.history.pushState({}, '', '/login');
     window.dispatchEvent(new PopStateEvent('popstate'));
   };
@@ -61,16 +63,17 @@ export const Header: React.FC = () => {
             <button
               type="button"
               onClick={handleLogout}
-              title="Trocar de sessão / Ir para Login"
-              className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer"
+              title="Sair da sessão"
+              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-red-300 bg-slate-800/70 hover:bg-red-500/10 border border-slate-700 hover:border-red-500/30 transition-colors cursor-pointer"
             >
-              <svg className="w-4 h-4 fill-none stroke-currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <svg className="w-3.5 h-3.5 fill-none stroke-currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9"
                 />
               </svg>
+              <span>Sair</span>
             </button>
           </div>
         </div>
